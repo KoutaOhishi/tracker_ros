@@ -4,8 +4,8 @@
 OpenCVの物体追跡のモジュールをROSで使いやすくしました。(opencv3.4以上推奨)
 
 - [KCF(Kernelized Correlation Filters)](https://www.slideshare.net/hitoshinishimura75/kcf-75287109)
- - GOTURNに比べて圧倒的に速い（リアルタイムで追跡可能）
- - スケール変化に弱い
+   - GOTURNに比べて圧倒的に速い（リアルタイムで追跡可能）
+   - スケール変化に弱い
 
 - [GOTURN(Generic Object Tracking Using Regression Networks)](https://qiita.com/nonbiri15/items/ca3d43acea0ccd43d412#goturn-tracker)  
   - ロバスト性は高い
