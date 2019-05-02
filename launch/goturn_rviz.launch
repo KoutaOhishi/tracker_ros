@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find tracker_ros)/launch/goturn_3d.launch"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find tracker_ros)/config/goturn.rviz" />
+</launch>

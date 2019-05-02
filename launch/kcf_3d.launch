@@ -1,0 +1,15 @@
+<launch>
+	<group ns="tracker_ros" >
+		<param name="sub_img_name" type="str" value="/camera/rgb/image_raw" />
+		<param name="target_boundingBox_name" type="str" value="/tracker_ros/update_bbox" />
+		<!--param name="cloud_topic_name" type="string" value="/camera/depth_registered/points"/-->
+		<param name="cloud_topic_name" type="string" value="/camera/depth/points"/>
+        	<param name="camera_frame_name" type="string" value="camera_depth_optical_frame"/>
+
+		<node pkg="tracker_ros" type="kcf_tracker" name="kcf_tracker"/>
+		<node pkg="tracker_ros" type="draw_boundingbox.py" name="draw_boundingbox" />
+		<node pkg="tracker_ros" type="tf_broadcaster_kcf" name="tf_broadcaster_kcf" output="screen" />	
+	</group>
+	<include file="$(find openni2_launch)/launch/openni2.launch"/>
+	<!-- include file="$(find realsense_camera)/launch/r200_nodelet_rgbd.launch" / -->
+</launch>

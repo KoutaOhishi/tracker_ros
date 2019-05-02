@@ -1,0 +1,9 @@
+<launch>
+	<group ns="tracker_ros" >
+		<param name="sub_img_name" type="str" value="/camera/rgb/image_raw" />
+		<param name="target_boundingBox_name" type="str" value="/tracker_ros/update_bbox" />
+		<node pkg="tracker_ros" type="goturn_tracker" name="goturn_tracker" output="screen" />
+		<node pkg="tracker_ros" type="draw_boundingbox.py" name="draw_boundingbox" />	
+	</group>
+	<!--include file="$(find usb_cam)/launch/usb_cam.launch"/-->
+</launch>

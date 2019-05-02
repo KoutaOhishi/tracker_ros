@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find tracker_ros)/launch/kcf_3d.launch"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find tracker_ros)/config/kcf.rviz" />
+</launch>
